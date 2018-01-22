@@ -6,12 +6,9 @@ metadata:
     service: nginx
 spec:
   ports:
-  - protocol: TCP
-    port: 80
-    targetPort: 80
+  - port: 80
   selector:
-    service: nginx
-  kind: LoadBalancer
+    app: nginx
 ---
 apiVersion: extensions/v1beta1 # for versions before 1.9.0 use apps/v1beta2
 kind: Deployment
